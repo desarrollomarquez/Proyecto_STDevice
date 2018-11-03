@@ -1,0 +1,32 @@
+scripst ST340LC
+
+Função
+SMS
+Configurar Parâmetros de Rede
+SA200NTW;XXXX;02;Autenticação;APN;Usuário;Senha;IP primário;Porta;IPsecundário;Porta;Número do SMS;PIN
+Configurar Parâmetros de Envio
+SA200RPT;XXXXX;02;Tempo parado;Tempo Movimento;60;3;0;200;0;0;0
+Requisitar posição GPRS
+SA200CMD;XXXXX;02;StatusReq
+Requisitar posição SMS
+Where are you . Só funciona para versões acima de 200.
+Ativar Saída 1
+SA200CMD;XXXX;02;Enable1
+Desativar Saída 1
+SA200CMD;XXXX;02;Disable1
+Ativar Saída 2
+SA200CMD;XXXX;02;Enable2
+Desativar Saída 2
+SA200CMD;XXXX;02;Disable2
+Solicitar Configuração
+SA200CMD;XXXX;02;Preset
+OBS:
+• No lugar da letra X grifada em vermelho, colocar o número de série do rastreador;
+• No SMS para Configurar Parâmetro de Rede, no campo Autenticação, colocar:
+0 = para chips da vivo.
+1 = para chips Tim, Claro, Oi e outros.
+• O comando “Requisitar posição SMS” só funcionara com os rastreadores que tiverem as seguintes versões:
+207B = ST215 E/I
+208B = ST215LC
+249 = ST215W
+212 = ST240.
